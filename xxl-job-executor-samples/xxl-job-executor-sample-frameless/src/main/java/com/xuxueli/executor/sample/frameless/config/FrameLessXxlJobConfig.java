@@ -20,6 +20,7 @@ public class FrameLessXxlJobConfig {
 
 
     private static FrameLessXxlJobConfig instance = new FrameLessXxlJobConfig();
+
     public static FrameLessXxlJobConfig getInstance() {
         return instance;
     }
@@ -44,6 +45,8 @@ public class FrameLessXxlJobConfig {
 
         // init executor
         xxlJobExecutor = new XxlJobExecutor();
+        // set base log dir
+        xxlJobExecutor.setLogPath("./logs/");
         xxlJobExecutor.setAdminAddresses(xxlJobProp.getProperty("xxl.job.admin.addresses"));
         xxlJobExecutor.setAppName(xxlJobProp.getProperty("xxl.job.executor.appname"));
         xxlJobExecutor.setIp(xxlJobProp.getProperty("xxl.job.executor.ip"));
@@ -75,7 +78,8 @@ public class FrameLessXxlJobConfig {
         try {
             ClassLoader loder = Thread.currentThread().getContextClassLoader();
 
-            in = new InputStreamReader(loder.getResourceAsStream(propertyFileName), "UTF-8");;
+            in = new InputStreamReader(loder.getResourceAsStream(propertyFileName), "UTF-8");
+            ;
             if (in != null) {
                 Properties prop = new Properties();
                 prop.load(in);

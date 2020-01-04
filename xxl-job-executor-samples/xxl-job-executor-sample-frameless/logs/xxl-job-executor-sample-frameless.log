@@ -1,0 +1,155 @@
+2020-01-04 11:15:14 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler@2ef1e4fa
+2020-01-04 11:15:14 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.ShardingJobHandler@2b71fc7e
+2020-01-04 11:15:14 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.HttpJobHandler@5ce65a89
+2020-01-04 11:15:14 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.CommandJobHandler@25f38edc
+2020-01-04 11:15:14 xxl-job-executor-sample-frameless [com.xxl.rpc.remoting.provider.XxlRpcProviderFactory]-[main]-[addService]-[197]-[INFO] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2020-01-04 11:15:14 xxl-job-executor-sample-frameless [com.xxl.rpc.remoting.net.Server]-[Thread-3]-[run]-[66]-[INFO] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9994
+2020-01-04 11:16:33 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[xxl-rpc, NettyHttpServer-serverHandlerPool-1972644485]-[registJobThread]-[224]-[INFO] >>>>>>>>>>> xxl-job regist JobThread success, jobId:1, handler:com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler@2ef1e4fa
+2020-01-04 11:16:33 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:124)
+2020-01-04 11:16:33 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:23)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:16:33 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:16:35 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:16:37 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:16:39 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:16:41 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:16:43 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:164)
+2020-01-04 11:16:43 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[xxl-job, executor TriggerCallbackThread]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xxl.job.core.thread.TriggerCallbackThread.callbackLog(TriggerCallbackThread.java:190)
+	at com.xxl.job.core.thread.TriggerCallbackThread.doCallback(TriggerCallbackThread.java:168)
+	at com.xxl.job.core.thread.TriggerCallbackThread.access$200(TriggerCallbackThread.java:24)
+	at com.xxl.job.core.thread.TriggerCallbackThread$1.run(TriggerCallbackThread.java:74)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-04 11:18:13 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler@3dd4520b
+2020-01-04 11:18:13 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.ShardingJobHandler@35d176f7
+2020-01-04 11:18:13 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.HttpJobHandler@6ebc05a6
+2020-01-04 11:18:13 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.CommandJobHandler@50b494a6
+2020-01-04 11:18:13 xxl-job-executor-sample-frameless [com.xxl.rpc.remoting.provider.XxlRpcProviderFactory]-[main]-[addService]-[197]-[INFO] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2020-01-04 11:18:13 xxl-job-executor-sample-frameless [com.xxl.rpc.remoting.net.Server]-[Thread-3]-[run]-[66]-[INFO] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9994
+2020-01-04 11:18:25 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[xxl-rpc, NettyHttpServer-serverHandlerPool-418375408]-[registJobThread]-[224]-[INFO] >>>>>>>>>>> xxl-job regist JobThread success, jobId:1, handler:com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler@3dd4520b
+2020-01-04 11:18:48 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:124)
+2020-01-04 11:18:48 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:23)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:18:48 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:20:22 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler@3dd4520b
+2020-01-04 11:20:22 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.ShardingJobHandler@35d176f7
+2020-01-04 11:20:22 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.HttpJobHandler@6ebc05a6
+2020-01-04 11:20:22 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[main]-[registJobHandler]-[211]-[INFO] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xuxueli.executor.sample.frameless.jobhandler.CommandJobHandler@50b494a6
+2020-01-04 11:20:22 xxl-job-executor-sample-frameless [com.xxl.rpc.remoting.provider.XxlRpcProviderFactory]-[main]-[addService]-[197]-[INFO] >>>>>>>>>>> xxl-rpc, provider factory add service success. serviceKey = com.xxl.job.core.biz.ExecutorBiz, serviceBean = class com.xxl.job.core.biz.impl.ExecutorBizImpl
+2020-01-04 11:20:23 xxl-job-executor-sample-frameless [com.xxl.rpc.remoting.net.Server]-[Thread-3]-[run]-[66]-[INFO] >>>>>>>>>>> xxl-rpc remoting server start success, nettype = com.xxl.rpc.remoting.net.impl.netty_http.server.NettyHttpServer, port = 9994
+2020-01-04 11:20:28 xxl-job-executor-sample-frameless [com.xxl.job.core.executor.XxlJobExecutor]-[xxl-rpc, NettyHttpServer-serverHandlerPool-1700619833]-[registJobThread]-[224]-[INFO] >>>>>>>>>>> xxl-job regist JobThread success, jobId:1, handler:com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler@3dd4520b
+2020-01-04 11:22:33 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:124)
+2020-01-04 11:22:33 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:23)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+2020-01-04 11:22:33 xxl-job-executor-sample-frameless [com.xxl.job.core.log.XxlJobFileAppender]-[Thread-6]-[appendLog]-[106]-[ERROR] No such file or directory
+java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:1012)
+	at com.xxl.job.core.log.XxlJobFileAppender.appendLog(XxlJobFileAppender.java:104)
+	at com.xxl.job.core.log.XxlJobLogger.logDetail(XxlJobLogger.java:43)
+	at com.xxl.job.core.log.XxlJobLogger.log(XxlJobLogger.java:66)
+	at com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler.execute(DemoJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
