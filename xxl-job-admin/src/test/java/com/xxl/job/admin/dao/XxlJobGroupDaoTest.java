@@ -1,12 +1,9 @@
 package com.xxl.job.admin.dao;
 
 import com.xxl.job.admin.core.model.XxlJobGroup;
-import com.xxl.job.admin.dao.XxlJobGroupDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
@@ -20,7 +17,7 @@ public class XxlJobGroupDaoTest {
     private XxlJobGroupDao xxlJobGroupDao;
 
     @Test
-    public void test(){
+    public void test() {
         List<XxlJobGroup> list = xxlJobGroupDao.findAll();
 
         List<XxlJobGroup> list2 = xxlJobGroupDao.findByAddressType(0);

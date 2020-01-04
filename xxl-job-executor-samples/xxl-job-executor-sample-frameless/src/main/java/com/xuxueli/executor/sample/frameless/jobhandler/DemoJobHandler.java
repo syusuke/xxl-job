@@ -3,12 +3,12 @@ package com.xuxueli.executor.sample.frameless.jobhandler;
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.IJobHandler;
 import com.xxl.job.core.log.XxlJobLogger;
-
-import java.util.concurrent.TimeUnit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 任务Handler示例（Bean模式）
- *
+ * <p>
  * 开发步骤：
  * 1、继承"IJobHandler"：“com.xxl.job.core.handler.IJobHandler”；
  * 2、注册到执行器工厂：在 "JFinalCoreConfig.initXxlJobExecutor" 中手动注册，注解key值对应的是调度中心新建任务的JobHandler属性的值。
@@ -18,15 +18,28 @@ import java.util.concurrent.TimeUnit;
  */
 public class DemoJobHandler extends IJobHandler {
 
-	@Override
-	public ReturnT<String> execute(String param) throws Exception {
-		XxlJobLogger.log("XXL-JOB, Hello World.");
+    private static Logger logger = LoggerFactory.getLogger(DemoJobHandler.class);
 
-		for (int i = 0; i < 5; i++) {
-			XxlJobLogger.log("beat at:" + i);
-			TimeUnit.SECONDS.sleep(2);
-		}
-		return SUCCESS;
-	}
+
+    @Override
+    public ReturnT<String> execute(String param) throws Exception {
+
+        logger.info("DemoJobHandler.execute. param = {}", param);
+
+        XxlJobLogger.log("XXL-JOB, Hello World.");
+
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+            }
+        }.start();
+
+        //for (int i = 0; i < 5; i++) {
+        //    XxlJobLogger.log("beat at:" + i);
+        //    TimeUnit.SECONDS.sleep(2);
+        //}
+        return SUCCESS;
+    }
 
 }

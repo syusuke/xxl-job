@@ -30,7 +30,7 @@ public class FramelessApplication {
             logger.error(e.getMessage(), e);
         } finally {
             // destory
-            FrameLessXxlJobConfig.getInstance().destoryXxlJobExecutor();
+            FrameLessXxlJobConfig.getInstance().destroyXxlJobExecutor();
         }
 
     }

@@ -1,15 +1,14 @@
 package com.xuxueli.executor.sample.frameless.config;
 
-import com.xuxueli.executor.sample.frameless.jobhandler.CommandJobHandler;
-import com.xuxueli.executor.sample.frameless.jobhandler.DemoJobHandler;
-import com.xuxueli.executor.sample.frameless.jobhandler.HttpJobHandler;
-import com.xuxueli.executor.sample.frameless.jobhandler.ShardingJobHandler;
+import com.xuxueli.executor.sample.frameless.jobhandler.*;
 import com.xxl.job.core.executor.XxlJobExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 /**
@@ -33,11 +32,12 @@ public class FrameLessXxlJobConfig {
      */
     public void initXxlJobExecutor() {
 
-        // registry jobhandler
-        XxlJobExecutor.registJobHandler("demoJobHandler", new DemoJobHandler());
-        XxlJobExecutor.registJobHandler("shardingJobHandler", new ShardingJobHandler());
-        XxlJobExecutor.registJobHandler("httpJobHandler", new HttpJobHandler());
-        XxlJobExecutor.registJobHandler("commandJobHandler", new CommandJobHandler());
+        // registry jobHandler
+        XxlJobExecutor.registerJobHandler("demoJobHandler", new DemoJobHandler());
+        XxlJobExecutor.registerJobHandler("shardingJobHandler", new ShardingJobHandler());
+        XxlJobExecutor.registerJobHandler("httpJobHandler", new HttpJobHandler());
+        XxlJobExecutor.registerJobHandler("commandJobHandler", new CommandJobHandler());
+        XxlJobExecutor.registerJobHandler("databaseJobHandler", new DatabaseJobHandler());
 
         // load executor prop
         Properties xxlJobProp = loadProperties("xxl-job-executor.properties");
@@ -45,8 +45,8 @@ public class FrameLessXxlJobConfig {
 
         // init executor
         xxlJobExecutor = new XxlJobExecutor();
+
         // set base log dir
-        xxlJobExecutor.setLogPath("./logs/");
         xxlJobExecutor.setAdminAddresses(xxlJobProp.getProperty("xxl.job.admin.addresses"));
         xxlJobExecutor.setAppName(xxlJobProp.getProperty("xxl.job.executor.appname"));
         xxlJobExecutor.setIp(xxlJobProp.getProperty("xxl.job.executor.ip"));
@@ -64,9 +64,9 @@ public class FrameLessXxlJobConfig {
     }
 
     /**
-     * destory
+     * destroy
      */
-    public void destoryXxlJobExecutor() {
+    public void destroyXxlJobExecutor() {
         if (xxlJobExecutor != null) {
             xxlJobExecutor.destroy();
         }
@@ -76,15 +76,16 @@ public class FrameLessXxlJobConfig {
     public static Properties loadProperties(String propertyFileName) {
         InputStreamReader in = null;
         try {
-            ClassLoader loder = Thread.currentThread().getContextClassLoader();
+            ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
-            in = new InputStreamReader(loder.getResourceAsStream(propertyFileName), "UTF-8");
-            ;
-            if (in != null) {
+            InputStream resourceAsStream = loader.getResourceAsStream(propertyFileName);
+            if (resourceAsStream != null) {
+                in = new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8);
                 Properties prop = new Properties();
                 prop.load(in);
                 return prop;
             }
+
         } catch (IOException e) {
             logger.error("load {} error!", propertyFileName);
         } finally {
